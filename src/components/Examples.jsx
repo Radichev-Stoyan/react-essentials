@@ -4,8 +4,17 @@ import TabButton from "./TabButton";
 import Section from "./Section";
 import Tabs from "./Tabs";
 
+/**
+ * Examples component that displays different examples based on the selected topic.
+ * @returns {JSX.Element} The rendered Examples component.
+ */
 export default function Examples() {
   const [selectedTopic, setSelectedTopic] = useState();
+
+  /**
+   * Handles the selection of a topic.
+   * @param {string} selectedButton - The selected topic.
+   */
   function handleSelect(selectedButton) {
     setSelectedTopic(selectedButton);
   }
@@ -23,8 +32,9 @@ export default function Examples() {
           </code>
         </pre>
       </div>
-    )
+    );
   }
+
   return (
     <Section id='examples'>
       <h2>Examples</h2>
@@ -42,5 +52,5 @@ export default function Examples() {
         {tabContent}
       </Tabs>
     </Section>
-  )
+  );
 }
